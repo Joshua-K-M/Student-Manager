@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Search By Title</title>
+</head>
+<body style="background-image:url('libimg.jpg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; padding-top: 100px;">
+<div style="text-align: center;">
+<h1 align="center"> SEARCH FOR BOOK BY TITLE</h1>
+<form th:action="@{/searchByTitle}" method="post">
+<input type="text" name="bookTitle" id="bookTitle" placeholder="book Title" required>
+
+<button type="submit">Save</button>
+</form>
+</div>
+</body>
+</html>

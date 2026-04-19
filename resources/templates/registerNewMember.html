@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register New Member</title>
+</head>
+<body style="background-image:url('book.jpeg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; paddling-top: 100px;">
+<h1 align="center">  Register New Member</h1> 
+<form th:action="@{/register}" method="post">
+<input type="text" name="name" id="name" placeholder="Name" required>
+<input type="text" name="Email" id="EmaiL" placeholder="Email" required>
+<button type="submit">Save</button>
+</form>
+</body>
+</html>

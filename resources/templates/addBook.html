@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Book</title>
+</head>
+<body style="background-image:url('book.jpeg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; paddling-top: 100px;">
+<div style="text-align: center;">
+<h1 align="center">  ADD NEW BOOK TO LIBRARY </h1>
+<form th:action="@{/saveBook}" th:object="${book}" method="post"}>
+<input type="text" th:field="*{title}" placeholder="Book Name" required>
+<input type="text" th:field="*{author}" placeholder="Author" required>
+<label for="category">Category:</label>
+<select th:field="*{category}" name="category" required>
+    <option value="" disabled selected> Select a category for your book</option>
+    <option value="FICTION">Fiction</option>
+    <option value="NON_FICTION">NON_FICTION</option> 
+    <option value="SCIENCE">SCIENCE</option>
+    <option value="BIOGRAPHY">BOIGRAPHY</option>
+    <option value="BIOLOGY">BIOLOGY</option>
+    <option value="CHEMISTRY">CHEMISTRY</option>
+    <option value="UNKNOWN">UNKNOWN</option>
+    <option value="HISTORY">HISTORY</option>
+    <option value="ANATOMY">ANATOMY</option>
+</select>
+<input type="checkbox" th:field="*{isAvailable}" placeholder="IsAvailable true/false" required>
+<button type="submit">Save</button>
+</form>
+</div>
+</body>
+</html>

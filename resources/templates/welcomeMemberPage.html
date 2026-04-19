@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+    .glass-panel {
+    background: rgba(255, 255, 255, 0.8); /* 0.8 is the opacity (0 to 1) */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* This blurs the library image behind the box */
+    max-width: 600px;
+    margin: 40px auto; /* Centers the box */
+    text-align: center;
+}
+    span{
+    color: blue; font-family:Arial; font-weight: bold;
+    }
+</style>
+<title>Welcome Member</title>
+</head>
+<body style="background-image:url('libmember.jpg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; paddling-top: 100px;">
+<div class="glass-panel" style="text-align: center;">
+<h1 align="center"> WELCOME TO YOUR LIBRARY MEMBER</h1>
+
+<a th:href="@{/searchTitle}" class="menu-link" style="font-size:50px; text-decoration: none;"> @ SEARCH BOOK BY TITLE</a><br>          
+<a th:href="@{/searchAuthor}" class="menu-link" style="font-size:50px; text-decoration: none;"> @ SEARCH BOOK BY AUTHOR</a><br> 
+<a th:href="@{/searchCategory}" class="menu-link" style="font-size:50px; text-decoration: none;"> @ SEARCH BOOK BY CATEGORY</a><br> 
+<a th:href="@{/borrowBook}" class="menu-link" style="font-size:50px; text-decoration: none;"> @ BORROW A BOOK</a><br>
+<a th:href="@{/returnBook}" class="menu-link" style="font-size:50px; text-decoration: none;"> @ RETURN A BOOK</a><br>
+<a th:href="@{/viewBorrowedByMember}" class="menu-link" style="font-size:50px; text-decoration: none;"> @ VIEW BORROWED BOOKS BY A MEMBER</a><br>
+</body>
+</html> 

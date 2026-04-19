@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8"><style type="text/css">
+    .glass-panel {
+    background: rgba(255, 255, 255, 0.8); /* 0.8 is the opacity (0 to 1) */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* This blurs the library image behind the box */
+    max-width: 600px;
+    margin: 40px auto; /* Centers the box */
+    text-align: center;
+}
+    span{
+    color: blue; font-family:Arial; font-weight: bold;
+    }
+</style>
+<title>Search By Author</title>
+</head>
+<body style="background-image:url('libimg.jpg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; padding-top: 100px;">
+<div class="glass-panel" th:if="${not #strings.isEmpty(enteredAuthor)}">
+    <div th:utext="${enteredAuthor}" class="menu-link"></div>
+</div>
+
+<div class="glass-panel" th:if="${#strings.isEmpty(enteredAuthor)}">
+    <p class="menu-link">No book with such Author</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View Borrowed Books By A Member</title>
+</head>
+<body style="background-image:url('libimg.jpg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; padding-top: 100px;">
+<form th:action="@{/viewing}" method="post">
+<input type="number" name="memberID" oninput="this.value=this.value.replace(/[^0-9]/g)" id="memberID" placeholder="Member ID. Numbers only " required>
+<button type="submit">Save</button>
+</form>
+</body>
+</html>

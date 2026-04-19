@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8"><style type="text/css">
+    .glass-panel {
+    background: rgba(255, 255, 255, 0.8); /* 0.8 is the opacity (0 to 1) */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* This blurs the library image behind the box */
+    max-width: 600px;
+    margin: 40px auto; /* Centers the box */
+    text-align: center;
+}
+    span{
+    color: blue; font-family:Arial; font-weight: bold;
+    }
+</style>
+<title>View Borrowed Books with All The Details</title>
+</head>
+<body style="background-image:url('book.jpeg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; paddling-top: 100px;">
+<div class="glass-panel" th:if="${not #strings.isEmpty(Borrowed)}">
+    <div th:utext="${Borrowed}" class="menu-link"></div>
+</div>
+
+<div class="glass-panel" th:if="${#strings.isEmpty(Borrowed)}">
+    <p class="menu-link">NO BORROWED BOOK YET</p>
+</div>
+</body>
+</html>

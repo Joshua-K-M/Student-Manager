@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>search By Category</title>
+</head>
+<body style="background-image:url('libimg.jpg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; padding-top: 100px;">
+<div style="text-align: center;">
+<h1 align="center"> SEARCH FOR BOOK BY CATEGORY</h1>
+<form th:action="@{/searchByCategory}" method="post"}>
+<label for="category">Category:</label>
+<select id="category" name="category" required>
+    <option value="" disabled selected> Select a category for your book</option>
+    <option value="FICTION">Fiction</option>
+    <option value="NON_FICTION">NON_FICTION</option> 
+    <option value="SCIENCE">SCIENCE</option>
+    <option value="BIOGRAPHY">BOIGRAPHY</option>
+    <option value="BIOLOGY">BIOLOGY</option>
+    <option value="CHEMISTRY">CHEMISTRY</option>
+    <option value="UNKNOWN">UNKNOWN</option>
+    <option value="HISTORY">HISTORY</option>
+    <option value="ANATOMY">ANATOMY</option>
+</select>
+<button type="submit">Save</button>
+</form>
+</div>
+</body>
+</html>

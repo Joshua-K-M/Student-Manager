@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Return borrowed Book</title>
+</head>
+<body style="background-image:url('libimg.jpg'); background-size: cover; background-position: center 100px;background-repeat: no-repeat; padding-top: 100px;">
+<div style="text-align: center;">
+<h1 align="center">  Return Book By ID </h1>
+<form th:action="@{/returning}" method="post">
+<input type="number" name="bookID" oninput="this.value=this.value.replace(/[^0-9]/g)" id="bookID" placeholder="Book ID. Numbers only " required>
+<input type="number" name="memberID" oninput="this.value=this.value.replace(/[^0-9]/g)" id="memberID" placeholder="Member ID. Numbers only " required>
+
+<button type="submit">Save</button>
+</form>
+</div>
+</body>
+</html>
